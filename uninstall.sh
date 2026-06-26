@@ -29,7 +29,7 @@ check_dsc_installed() {
 main() {
     check_oc_login
     check_dsc_installed
-    dsc server:delete --delete-all
+    dsc server:delete --delete-all --delete-namespace
 }
 
 main
