@@ -18,7 +18,7 @@ check_oc_login() {
 }
 
 confirm_uninstall() {
-    echo "WARNING: This will remove Dev Spaces and all workspaces!"
+    echo "WARNING: This will remove Dev Spaces."
     echo ""
     read -p "Are you sure you want to continue? (yes/no): " confirmation
     if [ "$confirmation" != "yes" ]; then
