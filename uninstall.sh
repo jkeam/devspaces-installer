@@ -17,17 +17,6 @@ check_oc_login() {
     echo ""
 }
 
-confirm_uninstall() {
-    echo "WARNING: This will remove Dev Spaces."
-    echo ""
-    read -p "Are you sure you want to continue? (yes/no): " confirmation
-    if [ "$confirmation" != "yes" ]; then
-        echo "Uninstall cancelled"
-        exit 0
-    fi
-    echo ""
-}
-
 check_dsc_installed() {
     echo "Checking OpenShift Dev Spaces status..."
     if ! dsc server:status; then
@@ -40,8 +29,7 @@ check_dsc_installed() {
 main() {
     check_oc_login
     check_dsc_installed
-    confirm_uninstall
-    dsc server:delete
+    dsc server:delete --delete-all
 }
 
 main
