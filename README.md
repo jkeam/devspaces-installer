@@ -11,8 +11,20 @@ Automated installation script for Red Hat OpenShift Dev Spaces.
 
 ## Install
 
+### Option 1
+
 ```shell
+# assumes you are installed as a cluster admin already
 ./install.sh
+```
+
+### Option 2
+
+```shell
+# if you are not logged in,
+# you can put in the username/password
+# in ./login-and-install.sh
+./login-and-install.sh
 ```
 
 ## Uninstalling
